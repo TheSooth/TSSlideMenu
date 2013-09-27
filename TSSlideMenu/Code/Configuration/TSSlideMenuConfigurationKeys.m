@@ -24,6 +24,7 @@ NSString *const TSMenuItemFontCKey = @"TSMenuItemFontCKey";
 NSString *const TSMenuItemFontColorCKey = @"TSMenuItemFontColorCKey";
 NSString *const TSMenuItemBackgroundColorCKey = @"TSMenuItemBackgroundColorCKey";
 NSString *const TSMenuItemSelectedBackgroundColorCKey = @"TSMenuItemSelectedBackgroundColorCKey";
+NSString *const TSMenuItemBottomDividerImageNameCKey = @"TSMenuItemBottomDividerImageNameCKey";
 
 NSString *const TSMenuItemImageHeightCKey = @"TSMenuItemImageHeightCKey";
 NSString *const TSMenuItemImageOffsetByXCKey = @"TSMenuItemImageOffsetByXCKey";
@@ -31,5 +32,6 @@ NSString *const TSMenuItemImageOffsetByYCkey = @"TSMenuItemImageOffsetByYCkey";
 
 NSString *const TSMenuWidthCKey = @"TSMenuWidthCKey";
 NSString *const TSMenuHeightCKey = @"TSMenuHeightCKey";
+NSString *const TSMenuOffsetByYCKey = @"TSMenuOffsetByYCKey";
 
 NSString *const TSMenuAnimationDurationCKey = @"TSMenuAnimationDurationCKey";

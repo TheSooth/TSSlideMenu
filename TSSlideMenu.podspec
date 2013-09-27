@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TSSlideMenu"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Top Slide-out navigation menu"
   s.homepage     = "https://github.com/TheSooth/TSSlideMenu"
 
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.author       = { "TheSooth" => "thesooth@aol.com" }
 
-  s.source       = { :git => "https://github.com/TheSooth/TSSlideMenu.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/TheSooth/TSSlideMenu.git", :tag => "#{s.version}" }
   s.platform     = :ios, '5.0'
   s.source_files = 'TSSlideMenu/Code', 'TSSlideMenu/Code/**/*.{h,m}'
   s.resources = 'TSSlideMenu/**/*.png'

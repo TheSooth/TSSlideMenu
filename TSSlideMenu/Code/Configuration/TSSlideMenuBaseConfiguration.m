@@ -35,6 +35,11 @@ static TSSlideMenuBaseConfiguration *sharedConfiguration = nil;
     [slideConfiguration setValue:@(.25f) forConfigKey:TSMenuAnimationDurationCKey];
     [slideConfiguration setValue:[UIColor colorWithRed:67.f / 255.f green:71.f / 255.f blue:78.f / 255.f alpha:1.f] forConfigKey:TSMenuBackgroundCKey];
     
+    [slideConfiguration setValue:@"menu_item_bottom_divider" forConfigKey:TSMenuItemBottomDividerImageNameCKey];
+    
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0)
+        [slideConfiguration setValue:@(20) forConfigKey:TSMenuOffsetByYCKey];
+    
     return slideConfiguration;
 }
 

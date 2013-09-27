@@ -22,6 +22,7 @@ extern NSString *const TSMenuItemFontCKey;
 extern NSString *const TSMenuItemFontColorCKey;
 extern NSString *const TSMenuItemBackgroundColorCKey;
 extern NSString *const TSMenuItemSelectedBackgroundColorCKey;
+extern NSString *const TSMenuItemBottomDividerImageNameCKey;
 
 extern NSString *const TSMenuItemImageHeightCKey;
 extern NSString *const TSMenuItemImageOffsetByXCKey;
@@ -29,5 +30,6 @@ extern NSString *const TSMenuItemImageOffsetByYCkey;
 
 extern NSString *const TSMenuWidthCKey;
 extern NSString *const TSMenuHeightCKey;
+extern NSString *const TSMenuOffsetByYCKey;
 
 extern NSString *const TSMenuAnimationDurationCKey;

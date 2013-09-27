@@ -92,8 +92,9 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     
     CGFloat tableViewWidth = [[configuration valueForConfigKey:TSMenuWidthCKey] floatValue];
     CGFloat tableHeight = [[configuration valueForConfigKey:TSMenuHeightCKey] floatValue];
+    CGFloat tableOffsetByY = [[configuration valueForConfigKey:TSMenuOffsetByYCKey] floatValue];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(-tableViewWidth, 0, tableViewWidth, tableHeight) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(-tableViewWidth, tableOffsetByY, tableViewWidth, tableHeight) style:UITableViewStylePlain];
     
     self.dataProvider = [TSSlideMenuDataProvider new];
     self.dataSource = [TSSlideMenuDataSource new];

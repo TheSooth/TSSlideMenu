@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA284E2F17F5A8D8001FC93C /* menu_item_bottom_divider.png in Resources */ = {isa = PBXBuildFile; fileRef = EA284E2D17F5A8D8001FC93C /* menu_item_bottom_divider.png */; };
+		EA284E3017F5A8D8001FC93C /* menu_item_bottom_divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA284E2E17F5A8D8001FC93C /* menu_item_bottom_divider@2x.png */; };
 		EA5B233617F48E3D002231E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5B233517F48E3D002231E8 /* Foundation.framework */; };
 		EA5B234417F48E3D002231E8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5B234317F48E3D002231E8 /* XCTest.framework */; };
 		EA5B234517F48E3D002231E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5B233517F48E3D002231E8 /* Foundation.framework */; };
@@ -50,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA284E2D17F5A8D8001FC93C /* menu_item_bottom_divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_item_bottom_divider.png; sourceTree = "<group>"; };
+		EA284E2E17F5A8D8001FC93C /* menu_item_bottom_divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_item_bottom_divider@2x.png"; sourceTree = "<group>"; };
 		EA5B233217F48E3D002231E8 /* libTSSlideMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTSSlideMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5B233517F48E3D002231E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA5B233917F48E3D002231E8 /* TSSlideMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSSlideMenu-Prefix.pch"; sourceTree = "<group>"; };
@@ -108,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA284E2C17F5A8D0001FC93C /* Dividers */ = {
+			isa = PBXGroup;
+			children = (
+				EA284E2D17F5A8D8001FC93C /* menu_item_bottom_divider.png */,
+				EA284E2E17F5A8D8001FC93C /* menu_item_bottom_divider@2x.png */,
+			);
+			name = Dividers;
+			path = DIviders;
+			sourceTree = "<group>";
+		};
 		EA5B232917F48E3D002231E8 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +323,7 @@
 		EA5B23B717F48E8A002231E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA284E2C17F5A8D0001FC93C /* Dividers */,
 				EA5B23B817F48EA6002231E8 /* Icons */,
 			);
 			path = Resources;
@@ -393,6 +408,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA284E3017F5A8D8001FC93C /* menu_item_bottom_divider@2x.png in Resources */,
+				EA284E2F17F5A8D8001FC93C /* menu_item_bottom_divider.png in Resources */,
 				EA5B23C517F48F0F002231E8 /* menu_icon.png in Resources */,
 				EA5B23C617F48F0F002231E8 /* menu_icon@2x.png in Resources */,
 				EA5B235017F48E3D002231E8 /* InfoPlist.strings in Resources */,
@@ -599,6 +616,7 @@
 				EA5B235717F48E3D002231E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA5B235817F48E3D002231E8 /* Build configuration list for PBXNativeTarget "TSSlideMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +625,7 @@
 				EA5B235A17F48E3D002231E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
