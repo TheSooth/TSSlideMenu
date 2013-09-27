@@ -31,5 +31,6 @@ extern NSString *const TSMenuItemImageOffsetByYCkey;
 extern NSString *const TSMenuWidthCKey;
 extern NSString *const TSMenuHeightCKey;
 extern NSString *const TSMenuOffsetByYCKey;
+extern NSString *const TSMenuCornerRadiusCKey;
 
 extern NSString *const TSMenuAnimationDurationCKey;

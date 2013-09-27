@@ -33,5 +33,6 @@ NSString *const TSMenuItemImageOffsetByYCkey = @"TSMenuItemImageOffsetByYCkey";
 NSString *const TSMenuWidthCKey = @"TSMenuWidthCKey";
 NSString *const TSMenuHeightCKey = @"TSMenuHeightCKey";
 NSString *const TSMenuOffsetByYCKey = @"TSMenuOffsetByYCKey";
+NSString *const TSMenuCornerRadiusCKey = @"TSMenuCornerRadiusCKey";
 
 NSString *const TSMenuAnimationDurationCKey = @"TSMenuAnimationDurationCKey";

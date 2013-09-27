@@ -40,6 +40,8 @@ static TSSlideMenuBaseConfiguration *sharedConfiguration = nil;
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0)
         [slideConfiguration setValue:@(20) forConfigKey:TSMenuOffsetByYCKey];
     
+    [slideConfiguration setValue:@(6) forConfigKey:TSMenuCornerRadiusCKey];
+    
     return slideConfiguration;
 }
 

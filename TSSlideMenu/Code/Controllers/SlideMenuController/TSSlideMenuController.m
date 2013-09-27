@@ -13,6 +13,7 @@
 #import "TSMenuSection.h"
 #import "TSSlideMenuBaseConfiguration.h"
 #import "TSDimmedView.h"
+#import "TSMenuTableView.h"
 
 static const NSInteger kAlphaDivideCoefficient = 500;
 
@@ -23,7 +24,7 @@ static const NSInteger kAlphaDivideCoefficient = 500;
 
 @property (nonatomic, strong) NSMutableArray *sections;
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) TSMenuTableView *tableView;
 
 @property (nonatomic, strong) UIBarButtonItem *menuBarButton;
 
@@ -94,7 +95,8 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     CGFloat tableHeight = [[configuration valueForConfigKey:TSMenuHeightCKey] floatValue];
     CGFloat tableOffsetByY = [[configuration valueForConfigKey:TSMenuOffsetByYCKey] floatValue];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(-tableViewWidth, tableOffsetByY, tableViewWidth, tableHeight) style:UITableViewStylePlain];
+    self.tableView = [[TSMenuTableView alloc] initWithFrame:CGRectMake(-tableViewWidth, tableOffsetByY, tableViewWidth, tableHeight) style:UITableViewStylePlain];
+    self.tableView.cornerRadius = [[configuration valueForConfigKey:TSMenuCornerRadiusCKey] floatValue];
     
     self.dataProvider = [TSSlideMenuDataProvider new];
     self.dataSource = [TSSlideMenuDataSource new];
@@ -104,7 +106,6 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     self.dataSource.delegate = self;
     
     self.tableView.backgroundColor = [configuration valueForConfigKey:TSMenuBackgroundCKey];
-    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
