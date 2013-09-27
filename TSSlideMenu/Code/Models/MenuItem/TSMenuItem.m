@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSString *itemTitle;
 @property (nonatomic, strong) NSString *itemImageName;
 
+@property (nonatomic, copy) TSMenuCallbackBlock callbackBlock;
+
 @end
 
 @implementation TSMenuItem
@@ -54,6 +56,22 @@
     
     self.controllerClass = aControllerClass;
     self.itemTitle = aItemTitle;
+}
+
+- (void)addCallbackBlock:(TSMenuCallbackBlock)aCallbackBlock withTitle:(NSString *)aItemTitle itemImageName:(NSString *)aImageName
+{
+    [self addCallbackBlock:aCallbackBlock withTitle:aItemTitle];
+    
+    self.itemImageName = aImageName;
+}
+
+- (void)addCallbackBlock:(TSMenuCallbackBlock)aCallbackBlock withTitle:(NSString *)aItemTitle
+{
+    NSParameterAssert(aCallbackBlock);
+    NSParameterAssert(aItemTitle);
+    
+    self.itemTitle = aItemTitle;
+    self.callbackBlock = aCallbackBlock;
 }
 
 - (UIViewController *)menuItemViewController

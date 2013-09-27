@@ -16,6 +16,9 @@
 - (void)addViewControllerClass:(Class)aViewControllerClass withTitle:(NSString *)aTitle;
 - (void)addViewControllerClass:(Class)aViewControllerClass withTitle:(NSString *)aTitle imageName:(NSString *)aImageName;
 
+- (void)addCallbackBlock:(void(^)(void))aCallbackBlock withTitle:(NSString *)aTitle;
+- (void)addCallbackBlock:(void(^)(void))aCallbackBlock withTitle:(NSString *)aTitle imageName:(NSString *)aImageName;
+
 - (void)addSectionWithTitle:(NSString *)aTitle;
 
 @end

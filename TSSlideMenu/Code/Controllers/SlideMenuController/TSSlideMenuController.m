@@ -167,6 +167,20 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     [self addMenuItemToLastSection:menuItem];
 }
 
+- (void)addCallbackBlock:(void(^)(void))aCallbackBlock withTitle:(NSString *)aTitle
+{
+    [self addCallbackBlock:aCallbackBlock withTitle:aTitle imageName:nil];
+}
+
+- (void)addCallbackBlock:(void(^)(void))aCallbackBlock withTitle:(NSString *)aTitle imageName:(NSString *)aImageName
+{
+    TSMenuItem *menuItem = [TSMenuItem new];
+    
+    [menuItem addCallbackBlock:aCallbackBlock withTitle:aTitle itemImageName:aImageName];
+    
+    [self addMenuItemToLastSection:menuItem];
+}
+
 - (void)addMenuItemToLastSection:(TSMenuItem *)aMenuItem
 {
     TSMenuSection *section = [self sectionAtIndex:self.sections.count];
@@ -307,7 +321,11 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     NSParameterAssert(self.contentController);
     
     [self hideSlideMenu];
-    [self presentViewController:aObject.menuItemViewController];
+    if (aObject.callbackBlock) {
+        aObject.callbackBlock();
+    } else {
+        [self presentViewController:aObject.menuItemViewController];
+    }
 }
 
 @end
