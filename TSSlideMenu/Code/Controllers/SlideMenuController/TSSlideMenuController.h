@@ -10,6 +10,8 @@
 
 @interface TSSlideMenuController : UIViewController
 
+@property (nonatomic, strong, readonly) UINavigationController *contentController;
+
 - (void)addViewController:(UIViewController *)aViewController withTitle:(NSString *)aTitle;
 - (void)addViewController:(UIViewController *)aViewController withTitle:(NSString *)aTitle imageName:(NSString *)aImageName;
 

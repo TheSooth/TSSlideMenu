@@ -27,6 +27,7 @@
 		EA5B23C417F48EEA002231E8 /* TSMenuSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B23AC17F48E79002231E8 /* TSMenuSectionHeader.m */; };
 		EA5B23C517F48F0F002231E8 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5B23B917F48EA6002231E8 /* menu_icon.png */; };
 		EA5B23C617F48F0F002231E8 /* menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5B23BA17F48EA6002231E8 /* menu_icon@2x.png */; };
+		EA71016617F8BB3600314EA4 /* TSMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71016517F8BB3600314EA4 /* TSMenuTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		EA5B23AC17F48E79002231E8 /* TSMenuSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMenuSectionHeader.m; sourceTree = "<group>"; };
 		EA5B23B917F48EA6002231E8 /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
 		EA5B23BA17F48EA6002231E8 /* menu_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon@2x.png"; sourceTree = "<group>"; };
+		EA71016417F8BB3600314EA4 /* TSMenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMenuTableView.h; sourceTree = "<group>"; };
+		EA71016517F8BB3600314EA4 /* TSMenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMenuTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +289,7 @@
 		EA5B23A317F48E79002231E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA71016317F8BB3600314EA4 /* MenuTableView */,
 				EA5B23A417F48E79002231E8 /* Cells */,
 				EA5B23A717F48E79002231E8 /* DimmedView */,
 				EA5B23AA17F48E79002231E8 /* Header */,
@@ -336,6 +340,15 @@
 				EA5B23BA17F48EA6002231E8 /* menu_icon@2x.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		EA71016317F8BB3600314EA4 /* MenuTableView */ = {
+			isa = PBXGroup;
+			children = (
+				EA71016417F8BB3600314EA4 /* TSMenuTableView.h */,
+				EA71016517F8BB3600314EA4 /* TSMenuTableView.m */,
+			);
+			path = MenuTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +441,7 @@
 				EA5B23C017F48EEA002231E8 /* TSMenuItem.m in Sources */,
 				EA5B23C117F48EEA002231E8 /* TSMenuSection.m in Sources */,
 				EA5B23C217F48EEA002231E8 /* TSSlideMenuCell.m in Sources */,
+				EA71016617F8BB3600314EA4 /* TSMenuTableView.m in Sources */,
 				EA5B23C317F48EEA002231E8 /* TSDimmedView.m in Sources */,
 				EA5B23C417F48EEA002231E8 /* TSMenuSectionHeader.m in Sources */,
 				EA5B23BC17F48EB8002231E8 /* TSSlideMenuConfigurationKeys.m in Sources */,
