@@ -81,10 +81,13 @@ static const NSInteger kAlphaDivideCoefficient = 500;
 
 - (void)setupConfiguration
 {
-    TSSlideMenuBaseConfiguration *baseConfiguration = [TSSlideMenuBaseConfiguration defaultConfiguration];
-    [TSSlideMenuBaseConfiguration setSharedConfiguration:baseConfiguration];
+    TSSlideMenuBaseConfiguration *confiugration = [TSSlideMenuBaseConfiguration sharedConfiguration];
+    if (!confiugration) {
+        confiugration = [TSSlideMenuBaseConfiguration defaultConfiguration];
+        [TSSlideMenuBaseConfiguration setSharedConfiguration:confiugration];
+    }
     
-    self.animationDuration = [[baseConfiguration valueForConfigKey:TSMenuAnimationDurationCKey] floatValue];
+    self.animationDuration = [[confiugration valueForConfigKey:TSMenuAnimationDurationCKey] floatValue];
 }
 
 - (void)setupTableView
