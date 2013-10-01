@@ -23,4 +23,6 @@
 
 - (void)addSectionWithTitle:(NSString *)aTitle;
 
+- (void)presentControllerWithClass:(Class)aClass presentedCallbackBlock:(void(^)(UIViewController *viewController))aCallbackBlock;
+
 @end

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TSSlideMenu"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "Top Slide-out navigation menu"
   s.homepage     = "https://github.com/TheSooth/TSSlideMenu"
 

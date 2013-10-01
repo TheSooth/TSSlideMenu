@@ -229,6 +229,36 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     aViewController.navigationItem.leftBarButtonItem = self.menuBarButton;
 }
 
+- (void)presentControllerWithClass:(Class)aClass presentedCallbackBlock:(void(^)(UIViewController *viewController))aCallbackBlock
+{
+    for (NSInteger i = 0; i < self.sections.count; i++) {
+        TSMenuSection *section = self.sections[i];
+        
+        for (NSInteger j = 0; j < section.numberOfItems; j++) {
+            TSMenuItem *menuItem = [section objectForRow:j];
+            
+            UIViewController *vc = menuItem.menuItemViewController;
+            
+            if ([vc isKindOfClass:aClass]) {
+                [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:j inSection:i]
+                                            animated:YES
+                                      scrollPosition:UITableViewScrollPositionNone];
+                [self presentViewController:vc];
+                
+                if (aCallbackBlock) {
+                    aCallbackBlock(vc);
+                }
+                
+                return;
+            }
+        }
+    }
+    
+    @throw [NSException exceptionWithName:@"TSSlideMenuController"
+                                   reason:[NSString stringWithFormat:@"ViewController with class %@ not founded", NSStringFromClass(aClass)]
+                                 userInfo:nil];
+}
+
 #pragma mark -
 #pragma mark - SlideMenu actions
 
