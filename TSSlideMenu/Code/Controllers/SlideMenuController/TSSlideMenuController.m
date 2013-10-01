@@ -110,6 +110,17 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     
     self.tableView.backgroundColor = [configuration valueForConfigKey:TSMenuBackgroundCKey];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    UIView *backgroundView = [configuration valueForConfigKey:TSMenuBackgroundViewCKey];
+    
+    if (backgroundView) {
+        self.tableView.backgroundView = backgroundView;
+    }
+    
+    BOOL shouldShowScrollIndicators = [configuration valueForConfigKey:TSMenuShouldShowScrollIndicatorsCKey];
+    
+    self.tableView.showsHorizontalScrollIndicator = shouldShowScrollIndicators;
+    self.tableView.showsVerticalScrollIndicator = shouldShowScrollIndicators;
 }
 
 - (void)setupNavigationItem
@@ -188,7 +199,15 @@ static const NSInteger kAlphaDivideCoefficient = 500;
 
 - (void)addMenuItemToLastSection:(TSMenuItem *)aMenuItem
 {
-    TSMenuSection *section = [self sectionAtIndex:self.sections.count];
+    TSMenuSection *section = nil;
+    
+    if (self.sections.count > 0) {
+        section = self.sections.lastObject;
+    } else {
+        section = [TSMenuSection new];
+        
+        [self.sections addObject:section];
+    }
     
     [section addMenuItem:aMenuItem];
 }
@@ -208,20 +227,6 @@ static const NSInteger kAlphaDivideCoefficient = 500;
 {
     self.contentController.viewControllers = @[aViewController];
     aViewController.navigationItem.leftBarButtonItem = self.menuBarButton;
-}
-
-- (TSMenuSection *)sectionAtIndex:(NSInteger)aIndex
-{
-    TSMenuSection *section = nil;
-    
-    if (aIndex <= self.sections.count - 1 && self.sections.count > 0) {
-        section = self.sections[aIndex];
-    } else {
-        section = [TSMenuSection new];
-        self.sections[aIndex] = section;
-    }
-    
-    return section;
 }
 
 #pragma mark -
@@ -246,7 +251,7 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     [UIView animateWithDuration:self.animationDuration animations:^{
         CGRect tableFrame = weakSelf.tableView.frame;
         tableFrame.origin.x = -CGRectGetWidth(tableFrame);
-                weakSelf.dimmedView.alpha = 0.f;
+        weakSelf.dimmedView.alpha = 0.f;
         [self.dimmedView removeFromSuperview];
         weakSelf.tableView.frame = tableFrame;
     } completion:^(BOOL finished) {

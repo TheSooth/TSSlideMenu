@@ -16,7 +16,7 @@ NSString *const TSMenuHeadersEnabledCKey = @"TSMenuHeadersEnabledCKey";
 NSString *const TSMenuHeaderHeightCKey = @"TSMenuHeaderHeightCKey";
 NSString *const TSMenuHeaderFontCKey = @"TSMenuHeaderFontCKey";
 NSString *const TSMenuHeaderFontColorCKey = @"TSMenuHeaderFontColorCKey";
-NSString *const TSMenuHeaderBackgroundColorCKey = @"TSMenuHeaderFontColorCKey";
+NSString *const TSMenuHeaderBackgroundColorCKey = @"TSMenuHeaderBackgroundColorCKey";
 NSString *const TSMenuHeaderLabelOffsetCKey = @"TSMenuHeaderLabeloffsetCKey";
 
 NSString *const TSMenuItemHeightCKey = @"TSMenuItemHeightCKey";
@@ -36,3 +36,5 @@ NSString *const TSMenuOffsetByYCKey = @"TSMenuOffsetByYCKey";
 NSString *const TSMenuCornerRadiusCKey = @"TSMenuCornerRadiusCKey";
 
 NSString *const TSMenuAnimationDurationCKey = @"TSMenuAnimationDurationCKey";
+
+NSString *const TSMenuShouldShowScrollIndicatorsCKey = @"TSMenuShouldShowScrollIndicatorsCKey";

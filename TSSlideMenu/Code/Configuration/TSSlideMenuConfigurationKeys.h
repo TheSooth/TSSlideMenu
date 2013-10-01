@@ -34,3 +34,5 @@ extern NSString *const TSMenuOffsetByYCKey;
 extern NSString *const TSMenuCornerRadiusCKey;
 
 extern NSString *const TSMenuAnimationDurationCKey;
+
+extern NSString *const TSMenuShouldShowScrollIndicatorsCKey;
