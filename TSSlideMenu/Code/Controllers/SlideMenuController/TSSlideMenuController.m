@@ -24,7 +24,7 @@ static const NSInteger kAlphaDivideCoefficient = 500;
 
 @property (nonatomic, strong) NSMutableArray *sections;
 
-@property (nonatomic, strong) TSMenuTableView *tableView;
+@property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) UIBarButtonItem *menuBarButton;
 
@@ -98,8 +98,7 @@ static const NSInteger kAlphaDivideCoefficient = 500;
     CGFloat tableHeight = [[configuration valueForConfigKey:TSMenuHeightCKey] floatValue];
     CGFloat tableOffsetByY = [[configuration valueForConfigKey:TSMenuOffsetByYCKey] floatValue];
     
-    self.tableView = [[TSMenuTableView alloc] initWithFrame:CGRectMake(-tableViewWidth, tableOffsetByY, tableViewWidth, tableHeight) style:UITableViewStylePlain];
-    self.tableView.cornerRadius = [[configuration valueForConfigKey:TSMenuCornerRadiusCKey] floatValue];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(-tableViewWidth, tableOffsetByY, tableViewWidth, tableHeight) style:UITableViewStylePlain];
     
     self.dataProvider = [TSSlideMenuDataProvider new];
     self.dataSource = [TSSlideMenuDataSource new];
